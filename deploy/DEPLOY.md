@@ -1,16 +1,16 @@
 # DEPLOY.md
 
 ## Status (2026-11-03)
-GitHub Pages is live for all five games (repo https://github.com/prasadiitian/smartgames, branch `gh-pages`, deployed 2026-11-03). Verified headless on the live URLs: loads, no console errors, no external requests, saves persist after reload, mute and pause work, live version string matches the zip. itch.io builds are uploaded via butler (project pages are still drafts, listing text and publishing are the owner's step). Playgama is waiting on a developer account.
+GitHub Pages is live for all five games (repo https://github.com/prasadiitian/smartgames, branch `gh-pages`, deployed 2026-11-03). Verified headless on the live URLs: loads, no console errors, no external requests, saves persist after reload, mute and pause work, live version string matches the zip. itch.io: the five pages are public (https://prasady.itch.io/<slug>) and each embedded build was verified in headless Chrome on 2026-11-03 (loads, version string correct, no errors; Floodgate was rate-limited by itch.io on the re-run but passed in the first run). Known item: the Skyline Stack page description currently contains the Floodgate text (owner to paste deploy/listing/skyline/itch.md); embeds use the default 640x480 size, so set 480x640 for the four portrait games. Playgama is waiting on a developer account.
 
 | Game | Version | Live URL (GitHub Pages) | itch.io | Playgama |
 |---|---|---|---|---|
 | Portal | - | https://prasadiitian.github.io/smartgames/ | - | - |
-| Bondwork (idle) | 1.2.2 | https://prasadiitian.github.io/smartgames/bondwork/ | https://prasady.itch.io/bondwork (draft, build 1.2.2 uploaded 2026-11-03) | waiting |
-| Moonmerge (merge puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/moonmerge/ | https://prasady.itch.io/moonmerge (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
-| Skyline Stack (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/skyline/ | https://prasady.itch.io/skyline (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
-| Floodgate (puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/floodgate/ | https://prasady.itch.io/floodgate (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
-| Lane Drift (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/lanedrift/ | https://prasady.itch.io/lanedrift (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Bondwork (idle) | 1.2.2 | https://prasadiitian.github.io/smartgames/bondwork/ | https://prasady.itch.io/bondwork (public, build 1.2.2 uploaded 2026-11-03) | waiting |
+| Moonmerge (merge puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/moonmerge/ | https://prasady.itch.io/moonmerge (public, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Skyline Stack (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/skyline/ | https://prasady.itch.io/skyline (public, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Floodgate (puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/floodgate/ | https://prasady.itch.io/floodgate (public, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Lane Drift (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/lanedrift/ | https://prasady.itch.io/lanedrift (public, build 1.0.0 uploaded 2026-11-03) | waiting |
 
 Zips are in `builds/` (`<slug>-v<version>-2026-11-03.zip`). Bondwork 1.2.0 was live for a few minutes and replaced by 1.2.1 (first-run help flag was not being saved), then 1.2.2 (header fits 360 px phones); redeploy is a push of `site/` to `gh-pages`.
 
