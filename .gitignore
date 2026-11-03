@@ -2,3 +2,5 @@ node_modules/
 dist/
 *.log
 .scratch/
+dist-games/
+site/
