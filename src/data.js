@@ -1,5 +1,5 @@
 // Static game data. All names, facts and numbers are original to this project.
-export const VERSION = '1.2.0';
+export const VERSION = '1.2.1';
 export const SAVE_VERSION = 1;
 
 export const ATOMS = ['H', 'O', 'C', 'N'];

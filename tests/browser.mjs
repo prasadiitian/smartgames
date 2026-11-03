@@ -133,6 +133,7 @@ for (const [w, h, touch] of sizes) {
   const savedE = await page.evaluate(() => __bondwork.state.taps);
   await page.reload({ waitUntil: 'load' }); await page.waitForFunction('window.__bondwork');
   ok(await page.evaluate((n) => __bondwork.state.taps === n && __bondwork.state.settings.mute, savedE), tag + 'save persists across reload');
+  ok(await page.evaluate(() => document.getElementById('modal').hidden), tag + 'How to play does not reappear after reload');
   const ver = await page.evaluate(() => document.getElementById('ver').textContent);
   ok(/^\d+\.\d+\.\d+$/.test(ver), tag + 'version string shown: ' + ver);
 

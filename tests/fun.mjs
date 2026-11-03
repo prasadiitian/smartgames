@@ -81,5 +81,10 @@ test('phase change keeps shelf and achievements, resets the run pile', () => {
   assert.ok(phaseChange(s) >= 1); assert.ok(s.disc.H2 && s.ach.a100); assert.deepEqual(s.runMade, {}); assert.equal(s.stats.made.H2, 50);
 });
 
+test('first-run help flag survives save and load (regression: it used to be dropped)', () => {
+  const s = newState(); s.seen.help = 1;
+  assert.equal(deserialize(serialize(s)).seen.help, 1);
+});
+
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);
