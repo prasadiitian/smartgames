@@ -3,9 +3,11 @@ import { REACTIONS, FORMULA, COLORS } from '../src/data.js';
 import { fmt, MAX, clamp } from '../src/num.js';
 import {
   newState, tick, tap, serialize, deserialize, exportSave, importSave, offline, ratioEfficiency,
-  buyReactor, setDial, stabilise, phaseChange, phasePointsGain,
+  buyReactor, setDial, stabilise, overload, collectRare, phaseChange, phasePointsGain, isPerfect, globalMult,
 } from '../src/engine.js';
 import { run } from './sim.mjs';
+import { RX, PERFECT_BONUS } from '../src/data.js';
+import { GOALS, ACHS, activeGoals } from '../src/goals.js';
 
 let pass = 0, fail = 0;
 function test(name, fn) {
@@ -97,7 +99,7 @@ test('balanced reactor beats mismatched one', () => {
 test('tap adds atoms', () => { const s = newState(); tap(s); assert.ok(s.inv.H >= 3); });
 test('unstable event is optional and never costs progress', () => {
   const s = newState(); s.evTimer = 0.1; tick(s, 0.2, () => 0); assert.ok(s.ev);
-  const e0 = s.energy; tick(s, 7, () => 0.5); assert.equal(s.ev, null); assert.ok(s.energy >= e0);
+  const e0 = s.energy; tick(s, 9, () => 0.5); assert.equal(s.ev, null); assert.ok(s.energy >= e0);
   const t = newState(); t.evTimer = 0.1; tick(t, 0.2, () => 0); assert.ok(stabilise(t)); assert.ok(t.stab);
 });
 test('palette: colours distinct (colorblind-safe Okabe-Ito set)', () => {

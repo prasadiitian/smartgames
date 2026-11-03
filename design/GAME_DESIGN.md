@@ -48,3 +48,18 @@ Single page: header (Energy, rate, pause, mute, codex, settings), atom bar, reac
 
 ## Save
 localStorage key `bondwork.save`, `version: 1`, autosave 15 s, export/import as base64 text, try/catch around storage.
+
+---
+
+# v1.1.0 fun pass (changes to the numbers above)
+
+- **Phase Change**: threshold 2e8 run Energy (was 2e7); Phase Points = floor(sqrt(runEnergy / 1e7)).
+- **H2O reactor** costs 120 (was 250).
+- **Perfect reactions**: a two-ingredient reactor at exactly the balanced ratio gets x1.25 yield. While every active two-ingredient reactor is perfect a streak grows: +0.4% Energy per second, max +40%.
+- **Reactors start unbalanced** (H2O 1:1, CO2 2:1, CH4 1:1, NH3 1:1, GLU 1:2) so balancing is a real step. The card names the ingredient in excess and the wasted fraction.
+- **Unstable Reaction** (every 60-120 s, 8 s window): Stabilise = x1.25 on that reactor for 20 s. Overload = 50% x3 for 15 s, 50% jam for 8 s. Ignoring costs nothing.
+- **Rare events**: first lucky bond at 38 s, then every 80-200 s. Lucky bond = 45 s of current income. Catalyst = x3 production for 15 s. Tap the token on the lab canvas within 9 s.
+- **Goals**: ordered list of 24 short goals (shown three at a time, then an endless "earn X" goal), reward = max(flat, 25 s of income). Long-term goal: Phase Change progress.
+- **Achievements**: 12, each +2% production permanently (kept through Phase Change).
+- **Discovery**: 8 molecules on the shelf with locked silhouettes and a reveal on first creation.
+- **Visible growth**: pile of molecules in the lab canvas (about floor(made^0.7) tiles per type, capped, shown as a pyramid). Resets on Phase Change.

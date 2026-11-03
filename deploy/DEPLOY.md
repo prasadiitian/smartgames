@@ -1,13 +1,13 @@
 # DEPLOY.md
 
 ## Status (2026-11-03)
-Build v1.0.0 is complete: all tests pass, pre-flight passes (`PRE-FLIGHT.md`), zip is in `builds/`, listings and covers are in `listing/`. Nothing is deployed yet; every target is waiting on a login.
+Build v1.1.0 (fun pass) is complete; v1.0.0 was never deployed. Build: all tests pass, pre-flight passes (`PRE-FLIGHT.md`), zip is in `builds/`, listings and covers are in `listing/`. Nothing is deployed yet; every target is waiting on a login.
 
 | Target | URL | Date | Version | State |
 |---|---|---|---|---|
-| GitHub Pages | https://prasadiitian.github.io/bondwork/ (planned) | - | v1.0.0 | waiting on `gh auth login` |
-| itch.io | (planned) | - | v1.0.0 | waiting on butler login + username |
-| Playgama | (planned) | - | v1.0.0 | waiting on developer account |
+| GitHub Pages | https://prasadiitian.github.io/bondwork/ (planned) | - | v1.1.0 | waiting on `gh auth login` |
+| itch.io | (planned) | - | v1.1.0 | waiting on butler login + username |
+| Playgama | (planned) | - | v1.1.0 | waiting on developer account |
 | CrazyGames / Poki | - | - | - | notes only (`listing/crazygames-poki-notes.md`) |
 
 ## Pending Access Requests

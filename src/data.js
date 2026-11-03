@@ -1,5 +1,5 @@
 // Static game data. All names, facts and numbers are original to this project.
-export const VERSION = '1.0.0';
+export const VERSION = '1.1.0';
 export const SAVE_VERSION = 1;
 
 export const ATOMS = ['H', 'O', 'C', 'N'];
@@ -41,7 +41,7 @@ export const REACTIONS = [
     eq: '2H → H₂', fact: 'Hydrogen is the lightest element, and nearly all of it in the universe is hydrogen or helium.' },
   { id: 'O2', tier: 1, inp: { O: 2 }, out: { O2: 1 }, cost: 40,
     eq: '2O → O₂', fact: 'Oxygen gas makes up about one fifth of dry air.' },
-  { id: 'H2O', tier: 2, inp: { H2: 2, O2: 1 }, out: { H2O: 2 }, cost: 250,
+  { id: 'H2O', tier: 2, inp: { H2: 2, O2: 1 }, out: { H2O: 2 }, cost: 120,
     eq: '2H₂ + O₂ → 2H₂O', fact: 'Burning hydrogen in oxygen makes only water, and releases a lot of energy.' },
   { id: 'CO2', tier: 2, inp: { C: 1, O2: 1 }, out: { CO2: 1 }, cost: 1500,
     eq: 'C + O₂ → CO₂', fact: 'Carbon dioxide is what carbon makes when it burns completely in plenty of oxygen.' },
@@ -55,6 +55,13 @@ export const REACTIONS = [
     eq: '6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂', fact: 'Plants make glucose from carbon dioxide and water using light, and release oxygen.' },
 ];
 export const RX = Object.fromEntries(REACTIONS.map(r => [r.id, r]));
+
+export const NAMES = {
+  H2: 'Hydrogen', O2: 'Oxygen', N2: 'Nitrogen', H2O: 'Water', CO2: 'Carbon dioxide',
+  CH4: 'Methane', NH3: 'Ammonia', GLU: 'Glucose',
+};
+// Reactors start slightly out of balance on purpose: finding the right ratio is the puzzle.
+export const START_DIALS = { H2O: { H2: 1, O2: 1 }, CO2: { C: 2, O2: 1 }, CH4: { C: 1, H2: 1 }, NH3: { N2: 1, H2: 1 }, GLU: { CO2: 1, H2O: 2 } };
 
 export const GENS = {
   H: { name: 'Hydrogen Source', base: 8, prod: 1.0 },
@@ -75,14 +82,16 @@ export const UPGRADES = {
 export const BASE_SLOTS = 5;
 export const MAX_SLOTS = 8;
 export const BASE_THROUGHPUT = 6;     // atom-units per second per reactor
-export const PHASE_THRESHOLD = 2e7;   // run Energy needed for first Phase Change
-export const PP_DIV = 1e6;
+export const PHASE_THRESHOLD = 2e8;   // run Energy needed for first Phase Change
+export const PP_DIV = 1e7;
 export const PP_BONUS = 0.2;          // +20% production per Phase Point
 export const OFFLINE_CAP = 8 * 3600;
 export const OFFLINE_RATE = 0.5;
 
 export const TIPS = [
-  'Tap the glowing atom button to spark atoms. Reactors turn atoms into molecules.',
-  'Reactors with two ingredients have ratio dials. Match the balanced equation to waste nothing.',
-  'When a reactor flashes "Unstable", tap it for a bonus. Ignoring it costs nothing.',
+  'Tap Spark to make atoms. Reactors bond them into molecules you can see piling up above.',
+  'Two-ingredient reactors have ratio dials. Match the balanced equation for a PERFECT bonus.',
+  'Unstable Reaction! Stabilise is safe; Overload is a gamble. Ignoring it costs nothing.',
 ];
+export const PERFECT_BONUS = 1.25;   // yield multiplier while a two-ingredient reactor is exactly balanced
+export const STREAK_MAX = 0.4;       // max extra Energy from a long perfect streak (+0.4% per second)

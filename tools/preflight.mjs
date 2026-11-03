@@ -15,6 +15,7 @@ const sh = (cmd) => spawnSync(cmd, { shell: true, cwd: root, encoding: 'utf8' })
 
 // 1. tests
 let r = sh('node tests/run.mjs'); check('Unit + economy tests', r.status === 0, (r.stdout.trim().split('\n').pop()));
+r = sh('node tests/fun.mjs'); check('Fun-pass tests (goals, discovery, dials, events, first-minute pacing)', r.status === 0, r.stdout.trim().split('\n').pop());
 r = sh('node tests/browser.mjs dist'); check('Browser tests on dist (3 viewports, console, network, layout)', r.status === 0, (r.stdout.trim().split('\n').pop()));
 
 // 2. size

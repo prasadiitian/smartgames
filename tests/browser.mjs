@@ -54,6 +54,27 @@ for (const [w, h, touch] of sizes) {
   const e1 = await page.evaluate(() => __bondwork.state.energy);
   ok(e1 > 0, tag + 'tapping and reactors produce Energy (' + e1.toFixed(1) + ')');
 
+  // fun-pass checks
+  const fun = await page.evaluate(async () => {
+    const out = {};
+    const sc = __bondwork.scene;
+    out.goals = document.querySelectorAll('#goals .goal').length;
+    out.shelfTiles = document.querySelectorAll('#shelf .tile').length;
+    out.lockedTiles = document.querySelectorAll('#shelf .tile.locked').length;
+    await new Promise(r => setTimeout(r, 1500));
+    out.molecules = sc.total();
+    const reveal = document.getElementById('reveal');
+    out.revealShown = !reveal.hidden;
+    // taps must still work while a reveal card is showing
+    const t0 = __bondwork.state.stats.taps; document.getElementById('btnTap').click(); out.tapWorks = __bondwork.state.stats.taps === t0 + 1;
+    return out;
+  });
+  ok(fun.goals >= 3 && fun.goals <= 4, tag + 'goals shown (short + long-term): ' + fun.goals);
+  ok(fun.shelfTiles === 8 && fun.lockedTiles >= 1, tag + 'shelf shows locked silhouettes (' + fun.lockedTiles + ' locked)');
+  ok(fun.molecules >= 1, tag + 'molecules visibly pile up in the lab (' + fun.molecules + ')');
+  ok(fun.revealShown, tag + 'first molecule shows a discovery reveal');
+  ok(fun.tapWorks, tag + 'reveal does not block play');
+
   // layout checks on each tab
   for (const tab of ['lab', 'build', 'codex', 'more']) {
     if (await page.$(`#tabs button[data-tab=${tab}]`).then(b => b && b.evaluate(x => x.offsetParent !== null))) {

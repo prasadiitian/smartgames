@@ -1,0 +1,97 @@
+{
+ "0s": {
+  "purchases": 0,
+  "firstPurchases": [],
+  "runEnergy": 2.25
+ },
+ "30s": {
+  "purchases": 7,
+  "firstPurchases": [
+   "3s gen:H",
+   "6s upg:tap",
+   "9s gen:H",
+   "12s gen:H",
+   "16s gen:H",
+   "21s gen:H",
+   "26s upg:tap"
+  ],
+  "runEnergy": 90
+ },
+ "2min": {
+  "purchases": 17,
+  "firstPurchases": [
+   "3s gen:H",
+   "6s upg:tap",
+   "9s gen:H",
+   "12s gen:H",
+   "16s gen:H",
+   "21s gen:H",
+   "26s upg:tap",
+   "31s gen:H",
+   "37s gen:H",
+   "45s gen:H",
+   "53s gen:H",
+   "62s gen:H"
+  ],
+  "runEnergy": 412.875
+ },
+ "10min": {
+  "purchases": 86,
+  "firstPurchases": [
+   "3s gen:H",
+   "6s upg:tap",
+   "9s gen:H",
+   "12s gen:H",
+   "16s gen:H",
+   "21s gen:H",
+   "26s upg:tap",
+   "31s gen:H",
+   "37s gen:H",
+   "45s gen:H",
+   "53s gen:H",
+   "62s gen:H"
+  ],
+  "runEnergy": 36321.04951199952
+ },
+ "30min": {
+  "purchases": 260,
+  "firstPurchases": [
+   "3s gen:H",
+   "6s upg:tap",
+   "9s gen:H",
+   "12s gen:H",
+   "16s gen:H",
+   "21s gen:H",
+   "26s upg:tap",
+   "31s gen:H",
+   "37s gen:H",
+   "45s gen:H",
+   "53s gen:H",
+   "62s gen:H"
+  ],
+  "runEnergy": 13346157.629942331
+ },
+ "first3min": {
+  "purchasesPer10s": [
+   3,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   1,
+   1,
+   1,
+   1,
+   2
+  ],
+  "longestGapBetweenPurchases": 13.5
+ }
+}

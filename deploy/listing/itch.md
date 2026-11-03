@@ -10,7 +10,7 @@
 
 **Embed:** "Click to launch in fullscreen" off; viewport **960 x 540** (16:9), enable "Mobile friendly", enable "Fullscreen button", "Automatically start on page load" off.
 
-**Upload:** `deploy/builds/bondwork-v1.0.0-*.zip`, tick "This file will be played in the browser".
+**Upload:** `deploy/builds/bondwork-v1.1.0-*.zip`, tick "This file will be played in the browser".
 
 **Cover image:** `covers/cover-630x500.png` (upload at 630x500; itch recommends 315x250 min). Screenshots: everything in `screenshots/`.
 
@@ -22,12 +22,17 @@ Spark hydrogen, oxygen, carbon and nitrogen atoms, then feed them into reactors 
 
 **Balance matters.** Reactors with two ingredients have ratio dials. Match the dials to the real balanced equation (2H2 + O2 -> 2H2O) and nothing is wasted; get it wrong and atoms are lost. A live efficiency meter tells you how you are doing.
 
-**Unstable reactions.** Now and then a reactor flashes. Tap Stabilise for a short bonus. Miss it and nothing bad happens.
+**Watch it grow.** Atoms drift, snap together with a flash, and drop onto a heap of molecules you can see getting bigger.
+
+**Unstable reactions.** Now and then a reactor flashes. Stabilise it for a safe bonus, or Overload it for a gamble: 50% chance of triple output, 50% chance of a short jam. Nothing is ever lost for good.
+
+**Surprises and goals.** Catch lucky bonds and catalysts as they float by, finish short goals, earn achievements for permanent bonuses, and fill your periodic shelf with real molecules and facts.
 
 **Phase Change.** After roughly half an hour, reset for permanent Phase Points: more production and more reactor slots.
 
 Features
-- Fast first minutes with an upgrade in seconds
+- Something happens every few seconds in the first minute
+- Perfect-balance streaks, a risk/reward Overload, rare events, goals and achievements
 - Real chemistry with a Codex of short, accurate facts
 - Offline progress for up to 8 hours
 - Save export/import, autosave, works on phones, tablets and desktop
@@ -38,7 +43,7 @@ Features
 Tap/click **Spark** to make atoms. Pick the atom with the coloured buttons. Tap **Build** on a reactor to unlock it, **-/+** to set the ratio dials, **On/Off** to use a reactor slot. Tap **Stabilise!** when a reactor glows. Pause and Sound buttons are at the top.
 
 ## Screenshot list
-1. 01-lab-desktop.png - Lab and shop on desktop
+1. 01-lab-desktop.png - Lab with the molecule heap, goals and shop on desktop
 2. 02-lab-phone-portrait.png - Phone portrait
 3. 03-build-phone.png - Build tab
 4. 04-codex-tablet.png - Codex

@@ -16,23 +16,25 @@
     <div class="stat" id="ppStat"><span class="lbl">Phase Pts</span><b id="pp">0</b></div>
     <div class="spacer"></div>
     <button id="btnPause" class="icon" aria-label="Pause">Pause</button>
-    <button id="btnMute" class="icon" aria-label="Mute">Sound on</button>
+    <button id="btnMute" class="icon" aria-label="Toggle sound">Sound</button>
   </header>
   <div id="banner" hidden></div>
   <nav id="tabs" role="tablist">
     <button data-tab="lab" class="on">Lab</button>
     <button data-tab="build">Build</button>
-    <button data-tab="codex">Codex</button>
+    <button data-tab="codex">Shelf</button>
     <button data-tab="more">Phase</button>
   </nav>
   <main>
     <section id="lab" class="panel on">
+      <div id="stage"><canvas id="cv" aria-label="Your lab: atoms bond into molecules that pile up"></canvas><div id="stageInfo" aria-hidden="true"></div></div>
       <div id="sparkRow">
-        <canvas id="cv" width="320" height="120" aria-hidden="true"></canvas>
         <div id="atomPick" role="group" aria-label="Atom to spark"></div>
         <button id="btnTap" class="big">Spark <span id="tapN"></span></button>
       </div>
+      <div id="goals" aria-label="Goals"></div>
       <div id="inv"></div>
+      <div id="streakBar" class="small"></div>
       <div id="reactors"></div>
     </section>
     <section id="build" class="panel">
@@ -42,7 +44,7 @@
       <h2>Upgrades</h2>
       <div id="upgs" class="list"></div>
     </section>
-    <section id="codex" class="panel"><div id="codexList"></div></section>
+    <section id="codex" class="panel"><h2>Periodic shelf</h2><p class="small" id="shelfCount"></p><div id="shelf"></div><h2>Achievements</h2><p class="small" id="achSum"></p><div id="achs"></div></section>
     <section id="more" class="panel">
       <div class="card" id="phaseCard"></div>
       <div class="card">
@@ -53,12 +55,16 @@
           <button id="btnImport">Import save</button>
           <button id="btnReset">Reset game</button>
         </div>
+        <label class="small"><input type="checkbox" id="optShake"> Screen shake</label>
         <textarea id="saveText" rows="3" spellcheck="false" aria-label="Save text" placeholder="Export shows your save here. Paste a save here, then press Import."></textarea>
         <p class="small" id="saveMsg" role="status"></p>
       </div>
       <p class="small center">Bondwork v<span id="ver"></span> · original game, no ads, no tracking</p>
     </section>
   </main>
+  <canvas id="fx" aria-hidden="true"></canvas>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="reveal" hidden></div>
   <div id="tip" hidden><span id="tipText"></span><button id="tipOk">Got it</button></div>
   <div id="modal" hidden><div class="dialog" role="dialog" aria-modal="true"><div id="modalBody"></div></div></div>
 </div>
