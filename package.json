@@ -1,1 +1,1 @@
-{"type":"module"}
+{"name":"bondwork","version":"1.0.0","private":true,"type":"module","scripts":{"test":"node tests/run.mjs","test:browser":"node tests/browser.mjs","build":"node tools/build.mjs"},"devDependencies":{"puppeteer-core":"^25.16.0"}}

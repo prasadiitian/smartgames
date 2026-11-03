@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Bondwork: a free idle game about building matter. Make atoms, balance reactions, and bond molecules.">
+<title>Bondwork</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='10' cy='16' r='8' fill='%2356B4E9'/%3E%3Ccircle cx='22' cy='16' r='8' fill='%23D55E00'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <div class="stat"><span class="lbl">Energy</span><b id="energy">0</b></div>
+    <div class="stat"><span class="lbl">per sec</span><b id="rate">0</b></div>
+    <div class="stat" id="ppStat"><span class="lbl">Phase Pts</span><b id="pp">0</b></div>
+    <div class="spacer"></div>
+    <button id="btnPause" class="icon" aria-label="Pause">Pause</button>
+    <button id="btnMute" class="icon" aria-label="Mute">Sound on</button>
+  </header>
+  <div id="banner" hidden></div>
+  <nav id="tabs" role="tablist">
+    <button data-tab="lab" class="on">Lab</button>
+    <button data-tab="build">Build</button>
+    <button data-tab="codex">Codex</button>
+    <button data-tab="more">Phase</button>
+  </nav>
+  <main>
+    <section id="lab" class="panel on">
+      <div id="sparkRow">
+        <canvas id="cv" width="320" height="120" aria-hidden="true"></canvas>
+        <div id="atomPick" role="group" aria-label="Atom to spark"></div>
+        <button id="btnTap" class="big">Spark <span id="tapN"></span></button>
+      </div>
+      <div id="inv"></div>
+      <div id="reactors"></div>
+    </section>
+    <section id="build" class="panel">
+      <div id="boosts"></div>
+      <h2>Atom sources</h2>
+      <div id="gens" class="list"></div>
+      <h2>Upgrades</h2>
+      <div id="upgs" class="list"></div>
+    </section>
+    <section id="codex" class="panel"><div id="codexList"></div></section>
+    <section id="more" class="panel">
+      <div class="card" id="phaseCard"></div>
+      <div class="card">
+        <h2>Save</h2>
+        <p class="small">Saved automatically every 15 seconds in this browser.</p>
+        <div class="row">
+          <button id="btnExport">Export save</button>
+          <button id="btnImport">Import save</button>
+          <button id="btnReset">Reset game</button>
+        </div>
+        <textarea id="saveText" rows="3" spellcheck="false" aria-label="Save text" placeholder="Export shows your save here. Paste a save here, then press Import."></textarea>
+        <p class="small" id="saveMsg" role="status"></p>
+      </div>
+      <p class="small center">Bondwork v<span id="ver"></span> · original game, no ads, no tracking</p>
+    </section>
+  </main>
+  <div id="tip" hidden><span id="tipText"></span><button id="tipOk">Got it</button></div>
+  <div id="modal" hidden><div class="dialog" role="dialog" aria-modal="true"><div id="modalBody"></div></div></div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>
