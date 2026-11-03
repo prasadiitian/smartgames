@@ -37,7 +37,7 @@ Features
 - Offline progress for up to 8 hours
 - Save export/import, autosave, works on phones, tablets and desktop
 - Colourblind-friendly palette, pause and mute buttons
-- No sign-up, nothing to install
+- Works in your browser on phone and desktop
 
 ## Controls
 Tap/click **Spark** to make atoms. Pick the atom with the coloured buttons. Tap **Build** on a reactor to unlock it, **-/+** to set the ratio dials, **On/Off** to use a reactor slot. Tap **Stabilise!** when a reactor glows. Pause and Sound buttons are at the top.

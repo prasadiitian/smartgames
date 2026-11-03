@@ -17,4 +17,4 @@ How to play: Swipe or use arrow keys. Equal bodies merge into the next size.
 - Short sessions, plays well one-handed on a phone and with keyboard or mouse on desktop
 - Your best score saves on your device
 - Pause and mute buttons
-- No sign-up, nothing to install
+- Works in your browser on phone and desktop
