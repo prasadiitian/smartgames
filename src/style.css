@@ -182,3 +182,12 @@ button.big:hover:not(:disabled),#tabs button.on:hover{background:linear-gradient
 .item button.can{background:linear-gradient(180deg,#2f8c5b,#1f6c44) #2a7f52}
 .item button.can:hover:not(:disabled){background:linear-gradient(180deg,#37a066,#237a4e) #2f8f5c}
 button{transition:transform .1s,border-color .15s,box-shadow .15s}
+
+#btnHelp{min-width:44px;padding:4px 0;font-size:18px;font-weight:800}
+#top{flex-wrap:nowrap}
+#top .stat{min-width:0}
+#top{gap:6px;padding:6px 8px}
+#top .stat{flex:none}
+#top .stat b{font-size:18px}
+#top .icon{padding:4px 8px;font-size:12px}
+#btnHelp{padding:4px 0;font-size:18px}

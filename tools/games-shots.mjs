@@ -14,7 +14,7 @@ for (const slug of ['moonmerge', 'skyline', 'floodgate', 'lanedrift']) {
   if (slug === 'moonmerge') for (let i = 0; i < 40; i++) { await pg.keyboard.press(['ArrowLeft', 'ArrowDown', 'ArrowRight', 'ArrowUp'][i % 4]); }
   if (slug === 'skyline') for (let i = 0; i < 5; i++) { await sleep(350 + i * 120); await pg.evaluate(() => window.__game.drop()); }
   if (slug === 'floodgate') await pg.evaluate(() => { for (const c of [1, 2, 3, 0, 1]) window.__game.pick(c); });
-  if (slug === 'lanedrift') { await sleep(1800); }
+  if (slug === 'lanedrift') { for (let i = 0; i < 60; i++) { const ok = await pg.evaluate(() => { const s = window.__game.state; return !s.dead && s.obstacles.some(o => o.y > 0.35 && o.y < 0.6) && s.coins.some(c => c.y > 0.2 && c.y < 0.6); }); if (ok) break; await sleep(100); } }
   await sleep(250); await pg.screenshot({ path: path.join(root, 'design/games', slug + '.png') });
   await (await pg.$('#cv')).screenshot({ path: path.join(root, 'design/games', slug + '-board.png') }); await pg.close();
 }

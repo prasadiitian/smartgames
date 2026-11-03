@@ -10,7 +10,7 @@
 
 **Embed:** "Click to launch in fullscreen" off; viewport **960 x 540** (16:9), enable "Mobile friendly", enable "Fullscreen button", "Automatically start on page load" off.
 
-**Upload:** `deploy/builds/bondwork-v1.2.1-*.zip`, tick "This file will be played in the browser".
+**Upload:** `deploy/builds/bondwork-v1.2.2-*.zip`, tick "This file will be played in the browser".
 
 **Cover image:** `covers/cover-630x500.png` (upload at 630x500; itch recommends 315x250 min). Screenshots: everything in `screenshots/`.
 

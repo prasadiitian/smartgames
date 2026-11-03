@@ -5,7 +5,7 @@
 **Languages:** English
 **Platforms:** Mobile and desktop browsers, portrait and landscape, runs in a 16:9 iframe
 **Orientation:** Both
-**Build:** `deploy/builds/bondwork-v1.2.1-*.zip` (index.html at root, ~90 KB unzipped, no external requests)
+**Build:** `deploy/builds/bondwork-v1.2.2-*.zip` (index.html at root, ~90 KB unzipped, no external requests)
 **Covers:** `covers/` (315x250, 630x500, 1280x720). **Screenshots:** `screenshots/`.
 **Ads/SDK:** Ships with a no-op platform adapter (`src/platform.js`). Playgama Bridge will be added after account approval; rewarded hooks already exist for "2x production" and "2x offline earnings".
 **Monetization:** none at launch.

@@ -14,7 +14,7 @@ fs.mkdirSync(path.join(out, 'screenshots'), { recursive: true });
 const CHROME = ['C:/Program Files/Google/Chrome/Application/chrome.exe', 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'].find(p => fs.existsSync(p));
 
 const sim = run(14);
-const st = sim.state; st.lastSave = Date.now(); st.seen.tips = 3;
+const st = sim.state; st.lastSave = Date.now(); st.seen.tips = 3; st.seen.help = 1;
 const save = serialize(st);
 
 const server = http.createServer((req, res) => {

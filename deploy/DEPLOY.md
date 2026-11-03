@@ -6,13 +6,13 @@ GitHub Pages is live for all five games (repo https://github.com/prasadiitian/sm
 | Game | Version | Live URL (GitHub Pages) | itch.io | Playgama |
 |---|---|---|---|---|
 | Portal | - | https://prasadiitian.github.io/smartgames/ | - | - |
-| Bondwork (idle) | 1.2.1 | https://prasadiitian.github.io/smartgames/bondwork/ | https://prasady.itch.io/bondwork (draft, build 1.2.1 uploaded 2026-11-03) | waiting |
+| Bondwork (idle) | 1.2.2 | https://prasadiitian.github.io/smartgames/bondwork/ | https://prasady.itch.io/bondwork (draft, build 1.2.2 uploaded 2026-11-03) | waiting |
 | Moonmerge (merge puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/moonmerge/ | https://prasady.itch.io/moonmerge (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 | Skyline Stack (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/skyline/ | https://prasady.itch.io/skyline (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 | Floodgate (puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/floodgate/ | https://prasady.itch.io/floodgate (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 | Lane Drift (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/lanedrift/ | https://prasady.itch.io/lanedrift (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 
-Zips are in `builds/` (`<slug>-v<version>-2026-11-03.zip`). Bondwork 1.2.0 was live for a few minutes and replaced by 1.2.1 (first-run help flag was not being saved); redeploy is a push of `site/` to `gh-pages`.
+Zips are in `builds/` (`<slug>-v<version>-2026-11-03.zip`). Bondwork 1.2.0 was live for a few minutes and replaced by 1.2.2 (first-run help flag was not being saved); redeploy is a push of `site/` to `gh-pages`.
 
 Pre-flight: `PRE-FLIGHT.md` (Bondwork, 14/14 pass) and `PRE-FLIGHT-GAMES.md` (other four, all pass). Listings: `listing/` (Bondwork at the top level, the others in `listing/<slug>/`). CrazyGames / Poki: notes only (`listing/crazygames-poki-notes.md`, applies to all five).
 
