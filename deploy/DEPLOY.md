@@ -1,16 +1,16 @@
 # DEPLOY.md
 
 ## Status (2026-11-03)
-GitHub Pages is live for all five games (repo https://github.com/prasadiitian/smartgames, branch `gh-pages`, deployed 2026-11-03). Verified headless on the live URLs: loads, no console errors, no external requests, saves persist after reload, mute and pause work, live version string matches the zip. itch.io and Playgama are waiting on logins.
+GitHub Pages is live for all five games (repo https://github.com/prasadiitian/smartgames, branch `gh-pages`, deployed 2026-11-03). Verified headless on the live URLs: loads, no console errors, no external requests, saves persist after reload, mute and pause work, live version string matches the zip. itch.io builds are uploaded via butler (project pages are still drafts, listing text and publishing are the owner's step). Playgama is waiting on a developer account.
 
 | Game | Version | Live URL (GitHub Pages) | itch.io | Playgama |
 |---|---|---|---|---|
 | Portal | - | https://prasadiitian.github.io/smartgames/ | - | - |
-| Bondwork (idle) | 1.2.1 | https://prasadiitian.github.io/smartgames/bondwork/ | waiting | waiting |
-| Moonmerge (merge puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/moonmerge/ | waiting | waiting |
-| Skyline Stack (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/skyline/ | waiting | waiting |
-| Floodgate (puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/floodgate/ | waiting | waiting |
-| Lane Drift (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/lanedrift/ | waiting | waiting |
+| Bondwork (idle) | 1.2.1 | https://prasadiitian.github.io/smartgames/bondwork/ | https://prasady.itch.io/bondwork (draft, build 1.2.1 uploaded 2026-11-03) | waiting |
+| Moonmerge (merge puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/moonmerge/ | https://prasady.itch.io/moonmerge (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Skyline Stack (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/skyline/ | https://prasady.itch.io/skyline (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Floodgate (puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/floodgate/ | https://prasady.itch.io/floodgate (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
+| Lane Drift (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/lanedrift/ | https://prasady.itch.io/lanedrift (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 
 Zips are in `builds/` (`<slug>-v<version>-2026-11-03.zip`). Bondwork 1.2.0 was live for a few minutes and replaced by 1.2.1 (first-run help flag was not being saved); redeploy is a push of `site/` to `gh-pages`.
 
@@ -23,10 +23,10 @@ Pre-flight: `PRE-FLIGHT.md` (Bondwork, 14/14 pass) and `PRE-FLIGHT-GAMES.md` (ot
 
 ## Pending Access Requests
 
-ACCESS NEEDED: itch.io
-Why: Publishing five HTML5 games needs your itch.io account.
-Do this: Create or log in to your itch.io account and accept its terms. In your own terminal run `C:\Users\prasa\tools\butler\butler.exe login`. Then either create five HTML projects titled Bondwork, Moonmerge, Skyline Stack, Floodgate and Lane Drift, or tell me to try butler, which creates a project on first push.
-Then tell me: "done" and your itch.io username
+ACCESS NEEDED: itch.io page settings (owner)
+Why: Builds are uploaded, but the five project pages are drafts and publishing a page is an account action.
+Do this: For each page (Edit game): confirm "This file will be played in the browser" is ticked on the html5 upload, set Embed options (viewport from the listing file, Mobile friendly, Fullscreen button), paste the description/tags from deploy/listing, add the screenshots/cover, then set Visibility to Public and Save.
+Then tell me: "done"
 
 ACCESS NEEDED: Playgama
 Why: Submitting the games needs a Playgama developer account.
