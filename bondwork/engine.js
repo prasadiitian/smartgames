@@ -35,7 +35,7 @@ export function newState() {
     disc: {}, ach: {}, goalsDone: {}, genGoal: 0,
     stats: { taps: 0, made: {}, events: 0, overWin: 0, rare: 0, perfectEver: false, bestStreak: 0 },
     playTime: 0, runTime: 0, taps: 0,
-    seen: { tips: 0, codex: {} },
+    seen: { tips: 0, help: 0, codex: {} },
     settings: { mute: false, shake: true },
     lastSave: 0,
     q: [],             // transient UI event queue (never saved)
