@@ -40,6 +40,7 @@ for (const [w, h, touch] of sizes) {
   page.on('request', r => { const u = r.url(); if (!u.startsWith(origin) && !u.startsWith('data:')) foreign.push(u); });
   const t0 = Date.now();
   await page.goto(base, { waitUntil: 'load' });
+  await page.waitForSelector('#helpOk', { timeout: 3000 }).then(() => page.click('#helpOk')).catch(() => {});
   await page.waitForFunction('window.__bondwork');
   const loadMs = Date.now() - t0;
   const tag = `[${w}x${h}${touch ? ' touch' : ''}] `;

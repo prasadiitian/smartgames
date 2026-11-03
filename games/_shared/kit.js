@@ -60,7 +60,15 @@ export function wire(game, key) {
   const setPaused = (p) => { game.paused = p; paintP(); const hint = document.getElementById('hint'); if (hint && p) hint.textContent = 'Paused'; };
   bp.onclick = () => setPaused(!game.paused);
   document.addEventListener('visibilitychange', () => { if (document.hidden) setPaused(true); });
+  // First run: show "How to play" and hold the game until Play is pressed. The ? button reopens it any time.
+  const help = document.getElementById('help'), play = document.getElementById('btnPlay'), seen = store(key + '.seen');
+  const openHelp = () => { help.hidden = false; game.paused = true; paintP(); play.focus({ preventScroll: true }); };
+  const closeHelp = () => { help.hidden = true; game.paused = false; paintP(); seen.set({ seen: true }); play.textContent = 'Continue'; };
+  document.getElementById('btnHelp').onclick = openHelp;
+  play.onclick = closeHelp;
+  addEventListener('keydown', e => { if (e.key === 'Escape' && !help.hidden) closeHelp(); });
   paintM(); paintP();
+  if (seen.get({ seen: false }).seen) play.textContent = 'Continue'; else openHelp();
   platform.init();
   return {
     setPlaying(on) { on ? platform.gameplayStart() : platform.gameplayStop(); },

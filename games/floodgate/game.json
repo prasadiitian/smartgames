@@ -1,1 +1,20 @@
-{"slug":"floodgate","title":"Floodgate","version":"1.0.0","scoreLabel":"Level","tagline":"Flood the whole board with one colour in as few moves as you can. Each level is a fresh puzzle.","hint":"Pick a colour to flood from the top-left corner. Finish within the move limit.","tags":"puzzle, flood-fill, colour, logic, casual, relaxing, singleplayer, mobile-friendly, colourblind-friendly, no-ads","genre":"Puzzle","viewport":"480x640"}
+{
+ "slug": "floodgate",
+ "title": "Floodgate",
+ "version": "1.0.0",
+ "scoreLabel": "Level",
+ "tagline": "Flood the whole board with one colour in as few moves as you can. Each level is a fresh puzzle.",
+ "hint": "Pick a colour to flood from the top-left corner. Finish within the move limit.",
+ "tags": "puzzle, flood-fill, colour, logic, casual, relaxing, singleplayer, mobile-friendly, colourblind-friendly, no-ads",
+ "genre": "Puzzle",
+ "viewport": "480x640",
+ "accent": "#2fbf71",
+ "goal": "Turn the whole board one colour before you run out of moves.",
+ "steps": [
+  "Everything starts from the top-left tile (marked with a white outline). The outlined area is your flood.",
+  "Tap a colour below the board. Your flood turns that colour and swallows every touching tile of that colour.",
+  "You have a limited number of moves, shown under the palette. Finish with moves to spare for more stars.",
+  "Every colour also has its own shape, so you never have to rely on colour alone. Keys 1-6 work too."
+ ],
+ "tip": "Choose the colour that swallows the most tiles, and look for big patches to jump to."
+}

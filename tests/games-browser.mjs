@@ -52,12 +52,18 @@ for (const slug of slugs) {
     check(`${tag}: no external requests`, reqs.length === 0, reqs.join(', '));
     check(`${tag}: version string shown`, /^\d+\.\d+\.\d+$/.test(await page.$eval('#ver', e => e.textContent)));
     await sleep(300);
+    check(`${tag}: How to play is shown on first run with steps and a goal`, await page.evaluate(() => !document.getElementById('help').hidden && document.querySelectorAll('#help li').length >= 3 && document.querySelector('#help .goal').textContent.length > 10));
+    check(`${tag}: game is held while help is open`, await page.evaluate(() => window.__game && document.getElementById('btnPause').textContent === 'Resume'));
+    await page.click('#btnPlay'); await sleep(100);
+    check(`${tag}: Play closes help and starts the game`, await page.evaluate(() => document.getElementById('help').hidden && document.getElementById('btnPause').textContent === 'Pause'));
+    await page.click('#btnHelp'); check(`${tag}: ? button reopens help`, await page.evaluate(() => !document.getElementById('help').hidden));
+    await page.keyboard.press('Escape'); await sleep(50);
     check(`${tag}: canvas is painted`, (await painted(page)) > 4);
     const box = await page.$eval('#cv', e => { const r = e.getBoundingClientRect(); return { l: r.left, r: r.right, t: r.top, b: r.bottom }; });
     check(`${tag}: canvas fits the viewport`, box.l >= 0 && box.r <= vw + 1 && box.t >= 0 && box.b <= vh + 1, JSON.stringify(box));
     const hdr = await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth + 1);
     check(`${tag}: no horizontal scroll`, hdr);
-    const btnH = await page.$$eval('button', bs => Math.min(...bs.map(b => b.getBoundingClientRect().height)));
+    const btnH = await page.$$eval('button', bs => Math.min(...bs.map(b => b.getBoundingClientRect().height).filter(h => h > 0)));
     check(`${tag}: buttons at least 44px tall`, btnH >= 43.5, String(btnH));
 
     // game-specific play
@@ -84,7 +90,7 @@ for (const slug of slugs) {
         const m0 = await page.evaluate(() => window.__game.moves);
         const g0 = await page.evaluate(() => window.__game.grid[0]);
         const target = (g0 + 1) % 4;
-        const cw = (360 - 20) / 4; const px = box.l + (10 + target * cw + cw / 2) / 360 * (box.r - box.l), py = box.t + (372 + 22) / 460 * (box.b - box.t);
+        const cw = (360 - 20) / 4; const px = box.l + (10 + target * cw + cw / 2) / 360 * (box.r - box.l), py = box.t + (372 + 22) / 476 * (box.b - box.t);
         await page.mouse.click(px, py); await sleep(100);
         check(`${tag}: palette click works`, (await page.evaluate(() => window.__game.moves)) === m0 + 1 || await page.$eval('#over', e => !e.hidden));
       }
@@ -103,6 +109,7 @@ for (const slug of slugs) {
     check(`${tag}: mute toggles`, /off/i.test(m1));
     await page.click('#btnPause'); check(`${tag}: pause toggles`, /resume/i.test(await page.$eval('#btnPause', e => e.textContent)));
     await page.reload({ waitUntil: 'load' }); await page.waitForFunction('window.__game');
+    check(`${tag}: help is not shown again after the first run`, await page.evaluate(() => document.getElementById('help').hidden));
     check(`${tag}: mute preference persists`, /off/i.test(await page.$eval('#btnMute', e => e.textContent)));
     check(`${tag}: still no console errors after reload`, errs.length === 0, errs.join('; '));
     await ctx.close();

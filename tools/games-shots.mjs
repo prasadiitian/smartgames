@@ -10,6 +10,7 @@ const b = await puppeteer.launch({ executablePath: CHROME, headless: true, args:
 for (const slug of ['moonmerge', 'skyline', 'floodgate', 'lanedrift']) {
   const pg = await b.newPage(); await pg.setViewport({ width: 480, height: 640 });
   await pg.goto(base + slug + '/'); await pg.waitForFunction('window.__game'); await sleep(300);
+  await pg.screenshot({ path: path.join(root, 'design/games', slug + '-help.png') }); await pg.click('#btnPlay'); await sleep(100);
   if (slug === 'moonmerge') for (let i = 0; i < 60; i++) { await pg.keyboard.press(['ArrowLeft', 'ArrowDown', 'ArrowRight', 'ArrowUp'][i % 4]); }
   if (slug === 'skyline') for (let i = 0; i < 40; i++) { await pg.evaluate(() => window.__game.drop()); await sleep(90 + (i * 37) % 160); }
   if (slug === 'floodgate') await pg.evaluate(() => { for (const c of [1, 2, 3, 0, 1]) window.__game.pick(c); });

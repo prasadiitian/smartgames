@@ -1,1 +1,20 @@
-{"slug":"skyline","title":"Skyline Stack","version":"1.0.0","scoreLabel":"Floors","tagline":"Tap to drop the sliding block and build the tallest tower. Land perfectly to keep it wide.","hint":"Tap, click or press Space to drop. Three perfect drops in a row widen the block.","tags":"arcade, stacker, timing, one-button, casual, hyper-casual, singleplayer, mobile-friendly, no-ads","genre":"Arcade","viewport":"480x640"}
+{
+ "slug": "skyline",
+ "title": "Skyline Stack",
+ "version": "1.0.0",
+ "scoreLabel": "Floors",
+ "tagline": "Tap to drop the sliding block and build the tallest tower. Land perfectly to keep it wide.",
+ "hint": "Tap, click or press Space to drop. Three perfect drops in a row widen the block.",
+ "tags": "arcade, stacker, timing, one-button, casual, hyper-casual, singleplayer, mobile-friendly, no-ads",
+ "genre": "Arcade",
+ "viewport": "480x640",
+ "accent": "#ff8a5c",
+ "goal": "Stack as many floors as you can without toppling.",
+ "steps": [
+  "A block slides back and forth. Tap, click or press Space to drop it.",
+  "Only the part that lands on the tower stays. The overhang falls away and the next block gets narrower.",
+  "Land almost exactly in line for a PERFECT drop: no trimming, and a rising chime.",
+  "Three perfect drops in a row make the block grow back. Miss completely and the tower topples."
+ ],
+ "tip": "Watch the block's edges, not its middle, and tap just before they line up."
+}

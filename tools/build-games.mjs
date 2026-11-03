@@ -23,7 +23,8 @@ for (const slug of slugs) {
   fs.mkdirSync(d, { recursive: true });
   for (const f of ['kit.js', 'kit.css', 'platform.js']) fs.copyFileSync(path.join(gamesDir, '_shared', f), path.join(d, f));
   fs.cpSync(path.join(gamesDir, slug, 'src'), d, { recursive: true });
-  fs.writeFileSync(path.join(d, 'index.html'), fill(tpl, meta));
+  const stepsHtml = meta.steps.map(s => `<li>${s}</li>`).join('');
+  fs.writeFileSync(path.join(d, 'index.html'), fill(tpl, { ...meta, stepsHtml, initial: meta.title[0] }));
   let bytes = 0;
   for (const f of fs.readdirSync(d)) bytes += fs.statSync(path.join(d, f)).size;
   if (bytes > 2 * 1024 * 1024) throw new Error(slug + ' too large');

@@ -9,7 +9,7 @@ await new Promise(r => server.listen(0, '127.0.0.1', r));
 const browser = await puppeteer.launch({ executablePath: CHROME, headless: true, args: ['--no-sandbox'] });
 const page = await browser.newPage(); await page.setViewport({ width: 390, height: 780, isMobile: true, hasTouch: true });
 const errs = []; page.on('pageerror', e => errs.push(String(e))); page.on('console', m => m.type() === 'error' && errs.push(m.text()));
-await page.goto(`http://127.0.0.1:${server.address().port}/`); await page.waitForFunction('window.__bondwork');
+await page.goto(`http://127.0.0.1:${server.address().port}/`); await page.waitForFunction('window.__bondwork'); await page.waitForSelector('#helpOk', { timeout: 3000 }).then(() => page.click('#helpOk')).catch(() => {});
 const marks = [4, 10, 20, 30, 42, 50]; const t0 = Date.now(); const log = []; let mi = 0;
 while ((Date.now() - t0) / 1000 < 52) {
   await page.evaluate(() => {

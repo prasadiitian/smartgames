@@ -1,7 +1,7 @@
 import { store, beep, note, fitCanvas, pointer, wire, showOver } from './kit.js';
-import { SHAPES, COLORS, newLevel, flood, solved } from './logic.js';
+import { SHAPES, COLORS, newLevel, flood, solved, region } from './logic.js';
 
-const W = 360, H = 460, BOARD = 340, TOP = 8, PAL_Y = 372;
+const W = 360, H = 476, BOARD = 340, TOP = 8, PAL_Y = 372;
 const cv = document.getElementById('cv');
 let ctx = fitCanvas(cv, W, H);
 const game = { paused: false }, kit = wire(game, 'floodgate');
@@ -65,6 +65,19 @@ function draw() {
     ctx.fillStyle = COLORS[c]; ctx.fillRect(x, y, cs + 0.5, cs + 0.5);
     shape(c, SHAPES[c], x + cs / 2, y + cs / 2, cs * 0.28 * (1 - anim * 0.15), 'rgba(0,0,0,.28)');
   }
+  // outline the flooded region so the player can see what a move will grow
+  const reg = region(grid, n);
+  ctx.strokeStyle = '#fff'; ctx.lineWidth = 3;
+  for (const i of reg) {
+    const x = ox + (i % n) * cs, y = TOP + ((i / n) | 0) * cs, cx = i % n, cy = (i / n) | 0;
+    ctx.beginPath();
+    if (cx === 0 || !reg.has(i - 1)) { ctx.moveTo(x + 1.5, y); ctx.lineTo(x + 1.5, y + cs); }
+    if (cx === n - 1 || !reg.has(i + 1)) { ctx.moveTo(x + cs - 1.5, y); ctx.lineTo(x + cs - 1.5, y + cs); }
+    if (cy === 0 || !reg.has(i - n)) { ctx.moveTo(x, y + 1.5); ctx.lineTo(x + cs, y + 1.5); }
+    if (cy === n - 1 || !reg.has(i + n)) { ctx.moveTo(x, y + cs - 1.5); ctx.lineTo(x + cs, y + cs - 1.5); }
+    ctx.stroke();
+  }
+  ctx.fillStyle = '#fff'; ctx.beginPath(); ctx.arc(ox + cs / 2, TOP + cs / 2, 3, 0, 7); ctx.fill();
   const cw = (W - 20) / lv.colors;
   for (let c = 0; c < lv.colors; c++) {
     const x = 10 + c * cw + cw / 2;

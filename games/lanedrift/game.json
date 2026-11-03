@@ -1,1 +1,20 @@
-{"slug":"lanedrift","title":"Lane Drift","version":"1.0.0","scoreLabel":"Score","tagline":"Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.","hint":"Swipe, tap the left or right side, or use the arrow keys to change lane.","tags":"arcade, endless-runner, reflex, one-handed, casual, hyper-casual, singleplayer, mobile-friendly, no-ads","genre":"Arcade","viewport":"480x640"}
+{
+ "slug": "lanedrift",
+ "title": "Lane Drift",
+ "version": "1.0.0",
+ "scoreLabel": "Score",
+ "tagline": "Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.",
+ "hint": "Swipe, tap the left or right side, or use the arrow keys to change lane.",
+ "tags": "arcade, endless-runner, reflex, one-handed, casual, hyper-casual, singleplayer, mobile-friendly, no-ads",
+ "genre": "Arcade",
+ "viewport": "480x640",
+ "accent": "#ffd166",
+ "goal": "Survive as long as you can and collect coins.",
+ "steps": [
+  "You steer the blue arrow along three lanes. Swipe left or right, tap the left or right half of the road, or use the arrow keys.",
+  "Red X blocks end your run. Every row always leaves at least one safe lane.",
+  "Gold coins are worth 10 points each, and your distance scores too.",
+  "The road gets faster the longer you last, up to a top speed."
+ ],
+ "tip": "Look at the lanes ahead, not at your arrow, and move early."
+}

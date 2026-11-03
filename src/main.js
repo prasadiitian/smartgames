@@ -142,6 +142,7 @@ function buildUI() {
     if (s.rare && scene.hitToken(px, py)) { rareCollected(e.clientX, e.clientY); return; }
     doTap(e.clientX, e.clientY);
   });
+  $('btnHelp').onclick = howTo;
   $('btnPause').onclick = () => setPaused(!paused);
   $('btnMute').onclick = () => { s.settings.mute = !s.settings.mute; setMuted(s.settings.mute); unlock(); };
   $('optShake').onchange = (e) => { s.settings.shake = e.target.checked; document.body.classList.toggle('noshake', !s.settings.shake); };
@@ -203,6 +204,24 @@ function onVisibility() {
 // ---------- modal ----------
 function modal(build) { const body = $('modalBody'); body.textContent = ''; build(body); $('modal').hidden = false; }
 function closeModal() { $('modal').hidden = true; }
+
+const HOW = [
+  ['Tap Spark', 'Tap the big Spark button to make atoms. Pick the atom type with the buttons above it. Atoms are the raw material for everything.'],
+  ['Build', 'Open the Build tab. Sources make atoms for you every second. Reactors bond atoms into molecules, and every molecule pays Energy. Spend Energy on more buildings and upgrades; green buttons mean you can afford them.'],
+  ['Balance the dials', 'A reactor with two ingredients has ratio dials. Match them to the real equation (2 H₂ + O₂ → 2 H₂O means 2 : 1). The card tells you which ingredient is wasted. Perfect balance gives +25% and builds a streak bonus.'],
+  ['Catch the moments', 'When a reactor flashes (Unstable Reaction), Stabilise for a safe bonus or Overload for a gamble. Tap floating lucky bonds and catalysts on the lab for rewards.'],
+  ['Follow the goals', 'The goal list always shows what to do next. Finish goals and achievements for rewards and permanent bonuses, and fill your Shelf with new molecules. Later, a Phase Change resets your run for permanent power.'],
+];
+function howTo() {
+  modal((b) => {
+    b.append(el('h2', '', 'How to play'), el('p', 'small', 'Build matter from atoms. Make atoms, bond them into molecules, and grow your lab.'));
+    const ol = el('ol', 'how');
+    for (const [h, t] of HOW) { const li = el('li'); li.append(el('b', '', h), el('span', '', ' ' + t)); ol.append(li); }
+    b.append(ol);
+    const ok = el('button', 'big', 'Got it'); ok.id = 'helpOk'; ok.onclick = closeModal;
+    b.append(el('div', 'row', '')); b.lastChild.append(ok);
+  });
+}
 
 function welcomeBack(away) {
   const res = offline(s, away);
@@ -457,6 +476,7 @@ async function boot() {
   last = Date.now(); rateE0 = s.energy;
   platform.gameplayStart();
   if (away >= 30) welcomeBack(away);
+  else if (!text || !s.seen.help) { s.seen.help = 1; howTo(); }
   maybeTip(0);
   window.__bondwork = { get state() { return s; }, tick: (d) => tick(s, d, Math.random, emit), save, version: VERSION, scene };
   requestAnimationFrame(frame);
