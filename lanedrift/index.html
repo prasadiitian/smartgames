@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.">
+<meta name="theme-color" content="#0d1118">
+<title>Lane Drift</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b2230'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%23ffd166'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="kit.css">
+<style>:root{--accent:#ffd166}</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo" aria-hidden="true">L</div>
+    <h1>Lane Drift<small>Arcade</small></h1>
+    <div class="stat"><span>Score</span><b id="score">0</b></div>
+    <div class="stat"><span>Best</span><b id="best">0</b></div>
+  </header>
+  <div id="stage"><canvas id="cv" aria-label="Lane Drift game board"></canvas><div id="over" hidden></div></div>
+  <div id="hint">Swipe or tap left / right to change lane.</div>
+  <div class="bar">
+    <button id="btnHelp" aria-label="How to play"></button>
+    <button id="btnPause"></button>
+    <button id="btnMute"></button>
+  </div>
+  <footer>Lane Drift v<span id="ver">1.0.0</span> · free · saves on this device</footer>
+</div>
+<div id="help" hidden role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+  <div class="sheet">
+    <div class="eyebrow">How to play</div>
+    <h2 id="helpTitle">Lane Drift</h2>
+    <p class="goal">Survive as long as you can and collect coins.</p>
+    <ol><li>You steer the blue arrow along three lanes. Swipe left or right, tap the left or right half of the road, or use the arrow keys.</li><li>Red X blocks end your run. Every row always leaves at least one safe lane.</li><li>Gold coins are worth 10 points each, and your distance scores too.</li><li>The road gets faster the longer you last, up to a top speed.</li></ol>
+    <div class="tip"><b>Tip:</b> Look at the lanes ahead, not at your arrow, and move early.</div>
+    <div class="go"><button class="primary" id="btnPlay">Play</button></div>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

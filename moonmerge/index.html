@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description" content="Swipe to merge dust into pebbles, moons, planets and stars. A calm, quick sliding merge puzzle.">
+<meta name="theme-color" content="#0d1118">
+<title>Moonmerge</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231b2230'/%3E%3Ccircle cx='16' cy='16' r='8' fill='%23ffd166'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="kit.css">
+<style>:root{--accent:#56b4e9}</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <div class="logo" aria-hidden="true">M</div>
+    <h1>Moonmerge<small>Puzzle</small></h1>
+    <div class="stat"><span>Score</span><b id="score">0</b></div>
+    <div class="stat"><span>Best</span><b id="best">0</b></div>
+  </header>
+  <div id="stage"><canvas id="cv" aria-label="Moonmerge game board"></canvas><div id="over" hidden></div></div>
+  <div id="hint">Swipe or use arrow keys. Equal bodies merge into the next size.</div>
+  <div class="bar">
+    <button id="btnHelp" aria-label="How to play"></button>
+    <button id="btnPause"></button>
+    <button id="btnMute"></button>
+  </div>
+  <footer>Moonmerge v<span id="ver">1.0.0</span> · free · saves on this device</footer>
+</div>
+<div id="help" hidden role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+  <div class="sheet">
+    <div class="eyebrow">How to play</div>
+    <h2 id="helpTitle">Moonmerge</h2>
+    <p class="goal">Merge matching bodies into bigger ones. Can you reach a Galaxy?</p>
+    <ol><li>Swipe (or use the arrow keys) to slide every body on the board in that direction.</li><li>When two bodies of the same size touch, they merge into the next size: Dust, Pebble, Rock, Moonlet, Moon, Dwarf planet, Planet, Gas giant, Star, Nova, Galaxy.</li><li>Each merge scores points, and a new body appears after every move.</li><li>If the board is full and nothing can merge, it collapses and the run ends.</li></ol>
+    <div class="tip"><b>Tip:</b> Keep your biggest body in a corner and build next to it.</div>
+    <div class="go"><button class="primary" id="btnPlay">Play</button></div>
+  </div>
+</div>
+<script type="module" src="main.js"></script>
+</body>
+</html>

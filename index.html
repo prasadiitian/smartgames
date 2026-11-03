@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0d14"><title>Smartgames</title><meta name="description" content="Quick browser games for phone and desktop: idle, puzzle and arcade.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314161c'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:dark;--font:Inter,"SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#f4f6fb;font:500 16px/1.5 var(--font);-webkit-font-smoothing:antialiased;
+ background:radial-gradient(900px 480px at 50% -10%,rgba(255,209,102,.18),transparent 70%),radial-gradient(700px 400px at 100% 100%,rgba(86,180,233,.12),transparent 70%),linear-gradient(180deg,#10151f,#0a0d14)}
+main{max-width:980px;margin:0 auto;padding:44px 18px 60px}
+.hero{text-align:center;margin-bottom:34px}
+.hero .eb{font-size:12px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#ffd166}
+.hero h1{margin:6px 0 8px;font-size:clamp(34px,6vw,54px);font-weight:800;letter-spacing:-.03em;line-height:1.05}
+.hero p{margin:0 auto;max-width:520px;color:#9fabc2}
+.pills{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:16px}
+.pills span{font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#cfd6e6}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(270px,1fr))}
+.card{display:flex;flex-direction:column;border-radius:22px;overflow:hidden;color:inherit;text-decoration:none;background:linear-gradient(180deg,rgba(38,47,68,.7),rgba(20,26,40,.8));border:1px solid rgba(255,255,255,.1);
+ box-shadow:0 14px 40px rgba(0,0,0,.45);transition:transform .2s,border-color .2s,box-shadow .2s}
+.card:hover,.card:focus-visible{transform:translateY(-5px);border-color:var(--a);box-shadow:0 22px 50px rgba(0,0,0,.55),0 0 40px color-mix(in srgb,var(--a) 25%,transparent);outline:none}
+.th{aspect-ratio:4/3;overflow:hidden;background:#0b0f16;position:relative}
+.th img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;transition:transform .35s}
+.th::after{content:"";position:absolute;inset:auto 0 0 0;height:40%;background:linear-gradient(transparent,rgba(20,26,40,.95))}
+.card:hover .th img{transform:scale(1.05)}
+.tx{padding:14px 18px 18px;display:flex;flex-direction:column;gap:2px;flex:1}
+.k{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--a)}
+.card h2{margin:0;font-size:22px;font-weight:800;letter-spacing:-.01em}
+.card p{margin:2px 0 12px;color:#9fabc2;font-size:14px;flex:1}
+.play{align-self:flex-start;font-weight:800;font-size:14px;color:#14161c;background:var(--a);padding:9px 18px;border-radius:12px;box-shadow:0 6px 18px color-mix(in srgb,var(--a) 35%,transparent)}
+footer{text-align:center;color:#6f7b92;font-size:12px;margin-top:40px}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body><main>
+<div class="hero"><div class="eb">Free browser games</div><h1>Smartgames</h1><p>Quick games for phone and desktop. Pick one and play.</p></div>
+<div class="grid">
+<a class="card" href="bondwork/" style="--a:#ffd166"><div class="th"><img src="thumbs/bondwork.png" alt="" loading="lazy"></div><div class="tx"><span class="k">Idle</span><h2>Bondwork</h2><p>A free idle game about building matter: balance reactions, bond molecules, phase-change.</p><span class="play">Play now</span></div></a>
+<a class="card" href="floodgate/" style="--a:#2fbf71"><div class="th"><img src="thumbs/floodgate.png" alt="" loading="lazy"></div><div class="tx"><span class="k">Puzzle</span><h2>Floodgate</h2><p>Flood the whole board with one colour in as few moves as you can. Each level is a fresh puzzle.</p><span class="play">Play now</span></div></a>
+<a class="card" href="lanedrift/" style="--a:#ffd166"><div class="th"><img src="thumbs/lanedrift.png" alt="" loading="lazy"></div><div class="tx"><span class="k">Arcade</span><h2>Lane Drift</h2><p>Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.</p><span class="play">Play now</span></div></a>
+<a class="card" href="moonmerge/" style="--a:#56b4e9"><div class="th"><img src="thumbs/moonmerge.png" alt="" loading="lazy"></div><div class="tx"><span class="k">Puzzle</span><h2>Moonmerge</h2><p>Swipe to merge dust into pebbles, moons, planets and stars. A calm, quick sliding merge puzzle.</p><span class="play">Play now</span></div></a>
+<a class="card" href="skyline/" style="--a:#ff8a5c"><div class="th"><img src="thumbs/skyline.png" alt="" loading="lazy"></div><div class="tx"><span class="k">Arcade</span><h2>Skyline Stack</h2><p>Tap to drop the sliding block and build the tallest tower. Land perfectly to keep it wide.</p><span class="play">Play now</span></div></a>
+</div>
+<footer>Progress is saved in your browser</footer>
+</main></body></html>
