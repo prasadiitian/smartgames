@@ -12,7 +12,7 @@ GitHub Pages is live for all five games (repo https://github.com/prasadiitian/sm
 | Floodgate (puzzle) | 1.0.0 | https://prasadiitian.github.io/smartgames/floodgate/ | https://prasady.itch.io/floodgate (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 | Lane Drift (arcade) | 1.0.0 | https://prasadiitian.github.io/smartgames/lanedrift/ | https://prasady.itch.io/lanedrift (draft, build 1.0.0 uploaded 2026-11-03) | waiting |
 
-Zips are in `builds/` (`<slug>-v<version>-2026-11-03.zip`). Bondwork 1.2.0 was live for a few minutes and replaced by 1.2.2 (first-run help flag was not being saved); redeploy is a push of `site/` to `gh-pages`.
+Zips are in `builds/` (`<slug>-v<version>-2026-11-03.zip`). Bondwork 1.2.0 was live for a few minutes and replaced by 1.2.1 (first-run help flag was not being saved), then 1.2.2 (header fits 360 px phones); redeploy is a push of `site/` to `gh-pages`.
 
 Pre-flight: `PRE-FLIGHT.md` (Bondwork, 14/14 pass) and `PRE-FLIGHT-GAMES.md` (other four, all pass). Listings: `listing/` (Bondwork at the top level, the others in `listing/<slug>/`). CrazyGames / Poki: notes only (`listing/crazygames-poki-notes.md`, applies to all five).
 
