@@ -6,7 +6,7 @@
 
 **Classification:** Games · **Kind of project:** HTML · **Pricing:** Free (no payments)
 
-**Genre:** Simulation (Idle) · **Tags:** idle, incremental, chemistry, science, relaxing, casual, clicker, singleplayer, mobile-friendly, no-ads
+**Genre:** Simulation (Idle) · **Tags:** idle, incremental, chemistry, science, relaxing, casual, clicker, singleplayer, mobile-friendly
 
 **Embed:** "Click to launch in fullscreen" off; viewport **960 x 540** (16:9), enable "Mobile friendly", enable "Fullscreen button", "Automatically start on page load" off.
 
@@ -37,7 +37,7 @@ Features
 - Offline progress for up to 8 hours
 - Save export/import, autosave, works on phones, tablets and desktop
 - Colourblind-friendly palette, pause and mute buttons
-- No ads, no tracking, no external network calls
+- No sign-up, nothing to install
 
 ## Controls
 Tap/click **Spark** to make atoms. Pick the atom with the coloured buttons. Tap **Build** on a reactor to unlock it, **-/+** to set the ratio dials, **On/Off** to use a reactor slot. Tap **Stabilise!** when a reactor glows. Pause and Sound buttons are at the top.

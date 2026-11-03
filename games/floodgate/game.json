@@ -5,7 +5,7 @@
  "scoreLabel": "Level",
  "tagline": "Flood the whole board with one colour in as few moves as you can. Each level is a fresh puzzle.",
  "hint": "Pick a colour to flood from the top-left corner. Finish within the move limit.",
- "tags": "puzzle, flood-fill, colour, logic, casual, relaxing, singleplayer, mobile-friendly, colourblind-friendly, no-ads",
+ "tags": "puzzle, flood-fill, colour, logic, casual, relaxing, singleplayer, mobile-friendly, colourblind-friendly",
  "genre": "Puzzle",
  "viewport": "480x640",
  "accent": "#2fbf71",

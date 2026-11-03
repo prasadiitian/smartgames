@@ -10,4 +10,4 @@
 
 **Short description:** Flood the whole board with one colour in as few moves as you can. Each level is a fresh puzzle.
 **Controls:** Pick a colour to flood from the top-left corner. Finish within the move limit.
-**Tags:** puzzle, flood-fill, colour, logic, casual, relaxing, singleplayer, mobile-friendly, colourblind-friendly, no-ads
+**Tags:** puzzle, flood-fill, colour, logic, casual, relaxing, singleplayer, mobile-friendly, colourblind-friendly

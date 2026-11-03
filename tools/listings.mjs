@@ -26,7 +26,7 @@ How to play: ${m.hint}
 - Short sessions, plays well one-handed on a phone and with keyboard or mouse on desktop
 - Your best score saves on your device
 - Pause and mute buttons
-- No ads, no tracking, no external network calls, no sign-up
+- No sign-up, nothing to install
 `);
   fs.writeFileSync(path.join(dir, 'playgama.md'), `# Playgama submission: ${m.title}
 

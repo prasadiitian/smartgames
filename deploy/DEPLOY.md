@@ -36,3 +36,6 @@ Do this: Create an account at https://developer.playgama.com, accept the terms, 
 Then tell me: "done"
 
 (CrazyGames and Poki: nothing needed from you until you ask.)
+
+## Ads (AdSense)
+The shipped builds contain no ad code. AdSense needs your own approved account and a site it has reviewed (an AdSense account and its terms are yours to set up); once you confirm approval I add the ad code as a separate commit per the deployment rules, and update the privacy/consent text at the same time. Note: AdSense often will not approve sites on free subdomains such as `github.io`, so you may need your own domain for the GitHub Pages site.

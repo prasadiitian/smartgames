@@ -50,7 +50,7 @@ const kinds = { bondwork: 'Idle', moonmerge: 'Puzzle', skyline: 'Arcade', floodg
 const cards = all.map(g => `<a class="card" href="${g.slug}/" style="--a:${g.accent || accents[g.slug]}"><div class="th"><img src="thumbs/${g.slug}.png" alt="" loading="lazy"></div><div class="tx"><span class="k">${kinds[g.slug]}</span><h2>${g.title}</h2><p>${g.tagline}</p><span class="play">Play now</span></div></a>`).join('\n');
 fs.writeFileSync(path.join(site, 'index.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0a0d14"><title>Smartgames</title><meta name="description" content="Five small free browser games: no ads, no tracking, no sign-up.">
+<meta name="theme-color" content="#0a0d14"><title>Smartgames</title><meta name="description" content="Five small free browser games. Nothing to install, no sign-up.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23ffd166'/%3E%3Ccircle cx='16' cy='16' r='6' fill='%2314161c'/%3E%3C/svg%3E">
 <style>
 :root{color-scheme:dark;--font:Inter,"SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
@@ -81,12 +81,11 @@ footer{text-align:center;color:#6f7b92;font-size:12px;margin-top:40px}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style></head>
 <body><main>
-<div class="hero"><div class="eb">Free browser games</div><h1>Smartgames</h1><p>Five small, original games you can play in a minute. Nothing to install, nothing to sign up for.</p>
-<div class="pills"><span>No ads</span><span>No tracking</span><span>Phone &amp; desktop</span><span>Saves on your device</span></div></div>
+<div class="hero"><div class="eb">Free browser games</div><h1>Smartgames</h1><p>Five small, original games you can play in a minute. Nothing to install, nothing to sign up for.</p></div>
 <div class="grid">
 ${cards}
 </div>
-<footer>Original games · progress is stored only in your browser</footer>
+<footer>Original games · progress is saved in your browser</footer>
 </main></body></html>
 `);
 fs.writeFileSync(path.join(site, '.nojekyll'), '');

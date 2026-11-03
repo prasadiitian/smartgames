@@ -10,4 +10,4 @@
 
 **Short description:** Tap to drop the sliding block and build the tallest tower. Land perfectly to keep it wide.
 **Controls:** Tap to drop. 3 perfect drops in a row widen the block.
-**Tags:** arcade, stacker, timing, one-button, casual, hyper-casual, singleplayer, mobile-friendly, no-ads
+**Tags:** arcade, stacker, timing, one-button, casual, hyper-casual, singleplayer, mobile-friendly

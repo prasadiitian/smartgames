@@ -10,4 +10,4 @@
 
 **Short description:** Swipe to merge dust into pebbles, moons, planets and stars. A calm, quick sliding merge puzzle.
 **Controls:** Swipe or use arrow keys. Equal bodies merge into the next size.
-**Tags:** puzzle, merge, 2048, space, casual, relaxing, singleplayer, mobile-friendly, no-ads
+**Tags:** puzzle, merge, 2048, space, casual, relaxing, singleplayer, mobile-friendly

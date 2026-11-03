@@ -1,6 +1,6 @@
 # Smartgames: five small free HTML5 games
 
-Bondwork (idle), Moonmerge (merge puzzle), Skyline Stack (timing stacker), Floodgate (colour-flood puzzle) and Lane Drift (endless dodger). No ads, no network calls, plain ES modules.
+Bondwork (idle), Moonmerge (merge puzzle), Skyline Stack (timing stacker), Floodgate (colour-flood puzzle) and Lane Drift (endless dodger). No network calls in the shipped build, plain ES modules.
 
 ## The four small games
 Sources in `games/<slug>/` (`logic.js` pure rules, `main.js` UI); shared kit in `games/_shared/` (storage, audio, pause/mute, no-op platform adapter).
