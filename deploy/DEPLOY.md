@@ -1,25 +1,30 @@
 # DEPLOY.md
 
-## Deployed
-| Target | URL | Date | Version |
-|---|---|---|---|
-| (none yet) | | | |
+## Status (2026-11-03)
+Build v1.0.0 is complete: all tests pass, pre-flight passes (`PRE-FLIGHT.md`), zip is in `builds/`, listings and covers are in `listing/`. Nothing is deployed yet; every target is waiting on a login.
+
+| Target | URL | Date | Version | State |
+|---|---|---|---|---|
+| GitHub Pages | https://prasadiitian.github.io/bondwork/ (planned) | - | v1.0.0 | waiting on `gh auth login` |
+| itch.io | (planned) | - | v1.0.0 | waiting on butler login + username |
+| Playgama | (planned) | - | v1.0.0 | waiting on developer account |
+| CrazyGames / Poki | - | - | - | notes only (`listing/crazygames-poki-notes.md`) |
 
 ## Pending Access Requests
 
-ACCESS NEEDED: GitHub (repo + Pages)
-Why: Repo creation and push work through the connected GitHub integration as `prasadiitian`. Enabling GitHub Pages needs repo admin through a CLI/token, which is not on this machine.
-Do this: Install GitHub CLI and run `gh auth login` in your own terminal (or `winget install GitHub.cli`, then `gh auth login`). If you prefer, once the repo exists, enable Pages manually: Settings > Pages > Deploy from branch > `main` / root.
+ACCESS NEEDED: GitHub
+Why: Creating the repo, pushing the full git history and enabling Pages needs an authenticated GitHub CLI. `gh` is now installed but not logged in.
+Do this: In your own terminal run `& "C:\Program Files\GitHub CLI\gh.exe" auth login` (GitHub.com, HTTPS, login with browser). Open a new terminal afterwards if `gh` is not found.
 Then tell me: "done"
 
 ACCESS NEEDED: itch.io
-Why: Publishing the HTML5 upload requires your itch.io account.
-Do this: Create/log in to your itch.io account, accept terms, then install butler (https://itchio.itch.io/butler), run `butler login` in your own terminal, and tell me your itch.io username. Or upload `deploy/builds/*.zip` manually using `deploy/listing/itch.md`.
+Why: Uploading the HTML5 build and filling in the listing needs your itch.io account.
+Do this: Create or log in to your itch.io account and accept its terms. Then in your own terminal run `C:\Users\prasa\tools\butler\butler.exe login` (butler is already installed there). Create a project page titled Bondwork (kind: HTML) so the URL exists; the text to paste is in `deploy/listing/itch.md`.
 Then tell me: "done" and your itch.io username
 
 ACCESS NEEDED: Playgama
-Why: Submission requires a developer account.
-Do this: Create an account at https://developer.playgama.com, accept terms, and log in in your browser. I will submit using `deploy/listing/playgama.md`, or you paste it in.
+Why: Submitting the game needs a Playgama developer account.
+Do this: Create an account at https://developer.playgama.com, accept the terms, and stay logged in in your browser. Submission text is in `deploy/listing/playgama.md`.
 Then tell me: "done"
 
-(CrazyGames and Poki: notes only, nothing needed from you until you ask.)
+(CrazyGames and Poki: nothing needed from you until you ask.)
