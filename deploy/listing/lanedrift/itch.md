@@ -12,7 +12,7 @@
 
 Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.
 
-How to play: Swipe, tap the left or right side, or use the arrow keys to change lane.
+How to play: Swipe or tap left / right to change lane.
 
 - Short sessions, plays well one-handed on a phone and with keyboard or mouse on desktop
 - Your best score saves on your device

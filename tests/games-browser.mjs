@@ -90,7 +90,7 @@ for (const slug of slugs) {
         const m0 = await page.evaluate(() => window.__game.moves);
         const g0 = await page.evaluate(() => window.__game.grid[0]);
         const target = (g0 + 1) % 4;
-        const cw = (360 - 20) / 4; const px = box.l + (10 + target * cw + cw / 2) / 360 * (box.r - box.l), py = box.t + (372 + 22) / 476 * (box.b - box.t);
+        const cw = (360 - 20) / 4; const px = box.l + (10 + target * cw + cw / 2) / 360 * (box.r - box.l), py = box.t + (372 + 22) / 480 * (box.b - box.t);
         await page.mouse.click(px, py); await sleep(100);
         check(`${tag}: palette click works`, (await page.evaluate(() => window.__game.moves)) === m0 + 1 || await page.$eval('#over', e => !e.hidden));
       }

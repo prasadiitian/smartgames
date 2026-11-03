@@ -5,7 +5,7 @@ Five games are built, tested and zipped. Nothing is deployed yet; every target i
 
 | Game | Version | Zip | GitHub Pages URL (planned) | itch.io | Playgama |
 |---|---|---|---|---|---|
-| Bondwork (idle) | 1.1.0 | `builds/bondwork-v1.1.0-*.zip` | https://prasadiitian.github.io/smartgames/bondwork/ | waiting | waiting |
+| Bondwork (idle) | 1.2.0 | `builds/bondwork-v1.2.0-*.zip` | https://prasadiitian.github.io/smartgames/bondwork/ | waiting | waiting |
 | Moonmerge (merge puzzle) | 1.0.0 | `builds/moonmerge-v1.0.0-*.zip` | .../smartgames/moonmerge/ | waiting | waiting |
 | Skyline Stack (arcade) | 1.0.0 | `builds/skyline-v1.0.0-*.zip` | .../smartgames/skyline/ | waiting | waiting |
 | Floodgate (puzzle) | 1.0.0 | `builds/floodgate-v1.0.0-*.zip` | .../smartgames/floodgate/ | waiting | waiting |

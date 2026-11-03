@@ -12,7 +12,7 @@
 
 Tap to drop the sliding block and build the tallest tower. Land perfectly to keep it wide.
 
-How to play: Tap, click or press Space to drop. Three perfect drops in a row widen the block.
+How to play: Tap to drop. 3 perfect drops in a row widen the block.
 
 - Short sessions, plays well one-handed on a phone and with keyboard or mouse on desktop
 - Your best score saves on your device

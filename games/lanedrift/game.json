@@ -4,7 +4,7 @@
  "version": "1.0.0",
  "scoreLabel": "Score",
  "tagline": "Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.",
- "hint": "Swipe, tap the left or right side, or use the arrow keys to change lane.",
+ "hint": "Swipe or tap left / right to change lane.",
  "tags": "arcade, endless-runner, reflex, one-handed, casual, hyper-casual, singleplayer, mobile-friendly, no-ads",
  "genre": "Arcade",
  "viewport": "480x640",

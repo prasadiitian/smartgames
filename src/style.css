@@ -135,3 +135,50 @@ body.noshake .shake{animation:none}
 .dialog ol.how li::before{content:counter(h);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#111;font-weight:800;display:grid;place-items:center}
 .dialog ol.how b{color:var(--accent)}
 .dialog ol.how+.row{position:sticky;bottom:-16px;background:var(--panel);padding:10px 0 2px;margin:0;justify-content:center}
+
+/* ---- v1.2 visual polish: glass panels, gradients, softer geometry (appended so it overrides the base rules) ---- */
+:root{--panel:rgba(30,39,56,.78);--panel2:rgba(255,255,255,.07);--line:rgba(255,255,255,.12);--font:Inter,"SF Pro Display",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+html,body{font-family:var(--font);-webkit-font-smoothing:antialiased;
+  background:radial-gradient(900px 480px at 50% -10%,rgba(255,209,102,.14),transparent 70%),radial-gradient(700px 420px at 100% 105%,rgba(86,180,233,.10),transparent 70%),linear-gradient(180deg,#10151f,#0a0d14)}
+button{border-radius:13px;font-weight:600;background:var(--panel2);border-color:var(--line);transition:transform .1s,border-color .15s,background .15s,box-shadow .15s}
+button:hover:not(:disabled){background:rgba(255,255,255,.11)}
+button:active:not(:disabled){transform:scale(.95)}
+button.big{background:linear-gradient(180deg,#ffe49f,#ffd166);color:#1b1500;font-weight:800;border-color:transparent;border-radius:15px;box-shadow:0 8px 22px rgba(255,209,102,.32),inset 0 1px 0 #fff9,inset 0 -3px 0 rgba(0,0,0,.18)}
+#top{background:rgba(22,29,42,.75);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:0 0 18px 18px;border-top:0;padding:8px 12px}
+.stat .lbl{font-weight:700;letter-spacing:.12em;font-size:10px}
+.stat b{font-weight:800;font-size:21px}
+#tabs{padding:10px 10px 6px;gap:6px}
+#tabs button{border-radius:13px;font-weight:700;background:var(--panel2)}
+#tabs button.on{background:linear-gradient(180deg,#ffe49f,#ffd166);box-shadow:0 6px 16px rgba(255,209,102,.3);color:#1b1500}
+.card,.rx,.item{background:linear-gradient(180deg,rgba(38,49,70,.82),rgba(25,32,48,.88));border:1px solid var(--line);border-radius:16px;box-shadow:0 6px 18px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.05)}
+h2{font-size:12px;font-weight:800;letter-spacing:.16em;color:var(--accent);margin:16px 2px 8px}
+.item button.can{background:linear-gradient(180deg,#2f8c5b,#1f6c44);border-color:#59d79a;font-weight:700;box-shadow:0 4px 12px rgba(47,140,91,.3)}
+.bar{border-radius:999px;height:9px;background:rgba(0,0,0,.35);border-color:rgba(255,255,255,.08)}
+.bar i{border-radius:999px;background:linear-gradient(90deg,#46c98a,#7be0a4)}
+.goal{background:linear-gradient(180deg,rgba(38,49,70,.8),rgba(25,32,48,.85));border-radius:14px;padding:8px 12px}
+.goal .bar i{background:linear-gradient(90deg,#ffc247,#ffd166)}
+.goal.long .bar i{background:linear-gradient(90deg,#3a98d4,#56B4E9)}
+#stage canvas{border-radius:18px;border:1px solid var(--line);box-shadow:0 12px 34px rgba(0,0,0,.5),0 0 40px rgba(255,209,102,.08)}
+.toast{background:rgba(28,37,54,.96);backdrop-filter:blur(8px);box-shadow:0 8px 24px rgba(0,0,0,.45)}
+#reveal .reveal{background:linear-gradient(180deg,rgba(40,52,76,.97),rgba(24,31,46,.97));border-radius:18px;box-shadow:0 18px 44px rgba(0,0,0,.55),0 0 36px rgba(255,209,102,.2)}
+.dialog{background:linear-gradient(180deg,rgba(40,52,76,.98),rgba(22,29,44,.99));border:1px solid rgba(255,255,255,.18);border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.7);padding:20px}
+.dialog h2{font-size:24px;letter-spacing:-.01em;text-transform:none;color:var(--text);margin:0 0 6px}
+#atomPick button{border-radius:13px}
+.chip{background:rgba(255,255,255,.06);border-color:var(--line)}
+#tip{border-radius:16px;background:rgba(28,40,60,.96);backdrop-filter:blur(8px)}
+button.big:hover:not(:disabled),#tabs button.on:hover{background:linear-gradient(180deg,#fff0bf,#ffd166);color:#1b1500}
+.item button.can:hover:not(:disabled){background:linear-gradient(180deg,#37a066,#237a4e)}
+/* opaque button fills (readable by contrast checkers, same look) */
+button{background:#252f45}
+button:hover:not(:disabled){background:#2f3b56}
+#tabs button{background:#252f45}
+#tabs button.on,button.big{background:linear-gradient(180deg,#ffe49f,#ffd166)}
+button.big:hover:not(:disabled),#tabs button.on:hover{background:linear-gradient(180deg,#fff0bf,#ffd166)}
+.item button.can{background:linear-gradient(180deg,#2f8c5b,#1f6c44)}
+.item button.can:hover:not(:disabled){background:linear-gradient(180deg,#37a066,#237a4e)}
+/* solid colour under each gradient (fallback + checkers) */
+#tabs button.on,button.big{background:linear-gradient(180deg,#ffe49f,#ffd166) #ffd166}
+button.big:hover:not(:disabled),#tabs button.on:hover{background:linear-gradient(180deg,#fff0bf,#ffd166) #ffd166}
+.item button.can{background:linear-gradient(180deg,#2f8c5b,#1f6c44) #2a7f52}
+.item button.can:hover:not(:disabled){background:linear-gradient(180deg,#37a066,#237a4e) #2f8f5c}
+button{transition:transform .1s,border-color .15s,box-shadow .15s}

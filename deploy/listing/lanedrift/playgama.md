@@ -9,5 +9,5 @@
 **Monetization:** none at launch.
 
 **Short description:** Swipe between three lanes, dodge the blocks and grab coins. The road keeps getting faster.
-**Controls:** Swipe, tap the left or right side, or use the arrow keys to change lane.
+**Controls:** Swipe or tap left / right to change lane.
 **Tags:** arcade, endless-runner, reflex, one-handed, casual, hyper-casual, singleplayer, mobile-friendly, no-ads

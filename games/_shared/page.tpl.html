@@ -21,14 +21,15 @@
   <div id="stage"><canvas id="cv" aria-label="{{title}} game board"></canvas><div id="over" hidden></div></div>
   <div id="hint">{{hint}}</div>
   <div class="bar">
-    <button id="btnHelp" aria-label="How to play">? How to play</button>
-    <button id="btnPause">Pause</button>
-    <button id="btnMute">Sound on</button>
+    <button id="btnHelp" aria-label="How to play"></button>
+    <button id="btnPause"></button>
+    <button id="btnMute"></button>
   </div>
   <footer>{{title}} v<span id="ver">{{version}}</span> · free · no ads · saves on this device</footer>
 </div>
 <div id="help" hidden role="dialog" aria-modal="true" aria-labelledby="helpTitle">
   <div class="sheet">
+    <div class="eyebrow">How to play</div>
     <h2 id="helpTitle">{{title}}</h2>
     <p class="goal">{{goal}}</p>
     <ol>{{stepsHtml}}</ol>
